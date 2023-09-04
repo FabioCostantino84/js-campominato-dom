@@ -43,3 +43,7 @@ body{
 .bg-green {
 	background-color: palegreen;
 }
+
+.bg-danger{
+	background-color: red;
+}

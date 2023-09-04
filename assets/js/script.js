@@ -26,16 +26,28 @@ function generateboxes(domElement, limit) {
 
         // aggiungere addEventListner quando clicco e far colorare la casella di azzurro
         cellElement.addEventListener('click', function () {
-            this.classList.toggle('bg-green')
-            console.log(this.classList);
+
+            if (randomNumbers.includes(i + 1)) {
+                this.classList.toggle('bg-danger')
+
+            } else {
+                this.classList.toggle('bg-green')
+
+            }
 
         })
 
     }
 }
 
+document.querySelector('.play_grid').addEventListener('click', function (event) {
+    event.preventDefault();
+
+    generateRandomNumbers();
+    generateboxes(boxesElement, limit);
+})
+
 // richiamo della funzione
-generateboxes(boxesElement, limit)
 
 
 /* 
@@ -52,11 +64,18 @@ Al termine della partita il software deve comunicare il punteggio, cioè il nume
 
 */
 
-const randomNumber = []
+let randomNumbers = [];
 function generateRandomNumbers() {
-    
-    let pcRandomNumber = Math.floor((Math.random() * 16) + 1);
-    randomNumber.push(pcRandomNumber);
-    console.log(pcRandomNumber);
+
+    while (randomNumbers.length < 16) {
+
+        let pcRandomNumber = Math.floor((Math.random() * 100) + 1);
+
+        if (!randomNumbers.includes(pcRandomNumber)) {
+            randomNumbers.push(pcRandomNumber);
+        }
+
+    }
+
+    console.log(randomNumbers);
 }
-console.log(randomNumber);
