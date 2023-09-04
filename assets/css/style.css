@@ -1,0 +1,45 @@
+body{
+    background-color: cornflowerblue;
+}
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 800px;
+	margin: 2rem auto;
+}
+
+.play_grid{
+	background-color: green;
+	padding: 1rem 2rem;
+	border-radius: 10px;
+	color: white;
+}
+
+.boxes
+{
+	display: flex;
+	flex-wrap: wrap;
+
+	& .cell
+	{
+		width: calc(100% / 10);
+		aspect-ratio: 1 / 1;
+		border: 1px solid red;
+		color: red;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+	}
+
+}
+
+.bg-green {
+	background-color: palegreen;
+}
