@@ -43,11 +43,11 @@ function generateboxes(domElement, limit) {
 document.querySelector('.play_grid').addEventListener('click', function (event) {
     event.preventDefault();
 
+// richiamo delle funzioni
     generateRandomNumbers();
     generateboxes(boxesElement, limit);
 })
 
-// richiamo della funzione
 
 
 /* 
