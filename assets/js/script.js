@@ -51,3 +51,12 @@ La partita termina quando il giocatore clicca su una bomba o quando raggiunge il
 Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha cliccato su una cella che non era una bomba.
 
 */
+
+const randomNumber = []
+function generateRandomNumbers() {
+    
+    let pcRandomNumber = Math.floor((Math.random() * 16) + 1);
+    randomNumber.push(pcRandomNumber);
+    console.log(pcRandomNumber);
+}
+console.log(randomNumber);
